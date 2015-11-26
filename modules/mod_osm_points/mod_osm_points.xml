@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>MOD_OSM_POINTS</name>
+    <author>Matt Meyrick</author>
+    <creationDate>October 2015</creationDate>
+    <copyright>Copyright (C) 2015. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <authorEmail>info@mtmeyrick.co.uk</authorEmail>
+    <authorUrl>www.mtmeyrick.co.uk</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_OSM_POINTS_XML_DESCRIPTION</description>
+	
+	<files>
+    	<filename module="mod_osm_points">mod_osm_points.php</filename>
+    	<folder>language</folder>
+		<folder>tmpl</folder>
+    	<filename>index.html</filename>     
+    	<filename>mod_osm_points.xml</filename>
+	</files>
+	
+	<languages>
+	    <language tag="en-GB">language/en-GB.mod_osm_points.ini</language>
+    	<language tag="en-GB">language/en-GB.mod_osm_points.sys.ini</language>
+	</languages>
+	    
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="text" name="feed" default="" label="MOD_OSM_POINTS_FEED_TITLE" description="MOD_OSM_POINTS_FEED_DESC" />
+                <field name="color" type="color" default="" label="MOD_OSM_POINTS_COLOR_TITLE" description="MOD_OSM_POINTS_COLOR_DESC" />
+                <field name="width" type="text" default="300" size="40" label="MOD_OSM_POINTS_WIDTH_TITLE" description="MOD_OSM_POINTS_WIDTH_DESCRIPTION" />
+                <field name="height" type="text" default="300" size="40" label="MOD_OSM_POINTS_HEIGHT_TITLE" description="MOD_OSM_POINTS_HEIGHT_DESCRIPTION" />
+            </fieldset>
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_module_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_moduleS_FIELD_moduleCLASS_SFX_LABEL"
+                    description="COM_moduleS_FIELD_moduleCLASS_SFX_DESC" />
+                <field
+                    name="owncache"
+                    type="list"
+                    default="1"
+                    label="COM_moduleS_FIELD_CACHING_LABEL"
+                    description="COM_moduleS_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option  value="0">COM_moduleS_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+	

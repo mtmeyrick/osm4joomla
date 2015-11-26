@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>MOD_OSM_COMING</name>
+    <author>Matt Meyrick</author>
+    <creationDate>October 2015</creationDate>
+    <copyright>Copyright (C) 2015. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <authorEmail>info@mtmeyrick.co.uk</authorEmail>
+    <authorUrl>www.mtmeyrick.co.uk</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_OSM_COMING_XML_DESCRIPTION</description>
+	
+	<files>
+    	<filename module="mod_osm_coming">mod_osm_coming.php</filename>
+		<folder>language</folder>
+    	<folder>tmpl</folder>
+    	<filename>index.html</filename>     
+    	<filename>mod_osm_coming.xml</filename>
+	</files>
+	
+	<languages>
+	    <language tag="en-GB">language/en-GB.mod_osm_coming.ini</language>
+    	<language tag="en-GB">language/en-GB.mod_osm_coming.sys.ini</language>
+	</languages>
+	
+	<scriptfile>script.php</scriptfile>
+
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field name="entries" class="" type="list" label="MOD_OSM_COMING_ENTRIES" description="MOD_OSM_COMING_ENTRIES_DESCRIPTION" default="3">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>					
+				</field>
+				<field name="display" class="" type="list" label="MOD_OSM_COMING_DISPLAY" description="MOD_OSM_COMING_DISPLAY_DESCRIPTION" default="both">
+					<option value="both">MOD_OSM_COMING_DISPLAY_BOTH</option>
+					<option value="programme">MOD_OSM_COMING_DISPLAY_PROGRAMME</option>
+					<option value="events">MOD_OSM_COMING_DISPLAY_EVENTS</option>
+				</field>
+				<field name="date" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_OSM_COMING_DATE" description="MOD_OSM_COMING_DATE_DESCRIPTION" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="description" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_OSM_COMING_DESC" description="MOD_OSM_COMING_DESC_DESCRIPTION" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>								
+            </fieldset>
+            <fieldset
+                name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_module_LAYOUT_DESC" />
+                <field name="moduleclass_sfx" type="text" label="COM_moduleS_FIELD_moduleCLASS_SFX_LABEL" description="COM_moduleS_FIELD_moduleCLASS_SFX_DESC" />
+                <field name="owncache" type="list" default="1" label="COM_moduleS_FIELD_CACHING_LABEL" description="COM_moduleS_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_moduleS_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+	
